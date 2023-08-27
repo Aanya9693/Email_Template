@@ -1,489 +1,167 @@
+<!DOCTYPE html>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!-- <link rel="stylesheet" href="/output.css"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;0,600;0,700;0,800;1,100;1,300;1,400&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap" rel="stylesheet">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modern HTML Email Template</title>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <!-- <link rel="stylesheet" href="/output.css"> --><link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;0,600;0,700;0,800;1,100;1,300;1,400&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap" rel="stylesheet">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Email Template</title>
-  <style type="text/css">
-
-  /* @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;0,600;0,700;0,800;1,100;1,300;1,400&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap'); */
-
-  body {
-    margin: 0;
-    height: 100v;
-    /* font-family: 'Barlow', sans-serif; */
-    font-family: 'Barlow';
-  }
-
-  .navbar {
-    background-color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .logo {
-    /* Add your logo styles here */
-  }
-
-  .footer {
-    background-color: #09192A;
-    overflow-x: hidden;
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 40px;
-  }
-
-  .img5 {
-    font-size: 14px;
-    margin-left: 4px;
-    color: #5A7184;
-    max-width: 400px;
-    line-height: 1.5;
-  }
-
-  .img6 {
-    display: flex;
-    transform: scale(0.75);
-    margin-top: 1rem;
-  }
-
-  .link {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 0 auto;
-    gap: 14px;
-    max-width: 6xl;
-    margin-top: 1rem;
-  }
-
-  .eachlink {
-    color: #92b0c9;
-    font-size: 1rem;
-    line-height: 1.5;
-    transition: color 0.2s;
-    text-align: left;
-    margin-right: 1rem;
-    flex-basis: calc(50% - 0.75rem);
-  }
-
-  .eachlink:hover {
-    color: #FFFFFF;
-  }
-
-  .contact {
-    max-width: 400px;
-    margin-left: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    margin-top: 1rem;
-  }
-
-  .eachcontact {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-  }
-
-  .itemcontact {
-    margin-left: 8px;
-  }
-
-  .itemtitle {
-    color: #92b0c9;
-    font-size: 0.75rem;
-  }
-
-  .itemdesc {
-    font-size: 1rem;
-    color: #FFFFFF;
-  }
-
-  .rights {
-    color: #5A7184;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-    white-space: nowrap;
-  }
-
-  .unsubscribe {
-    color: #5A7184;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-    font-size: 0.75rem;
-  }
-
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 20px;
-    background-color: #09192A;
-  }
-
-  .heading {
-    font-size: 32px;
-    color: #06E6EC;
-    font-weight: 400;
-    margin-top: 60px;
-    margin-bottom: 0;
-  }
-
-  .subheading {
-    margin: 0;
-    font-size: 44px;
-    /* margin-bottom: 1rem; */
-    color: #F2F2F2;
-    font-weight: 600;
-  }
-
-  .intro {
-    text-align: center;
-    max-width: 400px;
-    margin-bottom: 1rem;
-    /* color: #5A7184; */
-    /* color: #FFF; */
-    color: #FFFFFFE5;
-    /* font-size: 20px; */
-  }
-
-  .intro1 {
-    text-align: center;
-    max-width: 400px;
-    margin-top: 42px;
-    margin-bottom: 0;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 18px;
-  }
-
-  .button {
-    margin: 24px;
-    margin-bottom: 50px;
-    background-color: #06E6EC;
-    color: #09192A;
-    font-weight: bold;
-    padding: 0.9rem 2rem;
-    border-radius: 0.25rem;
-  }
-
-  .button:hover {
-    background-color: #09192A;
-    color: #06E6EC;
-  }
-
-  span {
-    color: #06E6EC;
-  }
-
-  .neucron {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 20px;
-    background-color: #FFFFFF;
-  }
-
-  .power {
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 1rem;
-    color: #09192A;
-    font-size: 28px;
-  }
-
-  .outline {
-    width: 148px;
-    height: 2px;
-    background-color: #06E6EC;
-    margin-bottom: 1rem;
-  }
+       <style>
+           .skewe {
+             height: 100vh;
+            background: linear-gradient(110deg, 0%, 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* Use clip-path to create a skewed shape */
+            color: #09192A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            }
+       </style>
+    </head>
+   
+   <!-- <a href="https://ibb.co/HF12nzw"><img src="https://i.ibb.co/1vhn8qy/blockchain-2-email-3-1.png" alt="blockchain-2-email-3-1" border="0"></a> -->
 
 
-  .card{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 0 -10px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+<body style="position:relative; margin: 0; padding: 0; font-family: Barlow, sans-serif; background-color: #FFF; ">
+  
 
-  .eachcard {
-    flex: 1 1 calc(25% - 22px);
-    margin: 0 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #FFFFFF;
-    padding-bottom: 18px;
-    margin-bottom: 80px;
-    border-radius: 0.5rem;
-  }
+    <!-- Header -->
+    <table align="center" bgcolor="#FFF" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td align="center" style="padding: 20px;">
+                <a href="https://imgbb.com/"><img src="https://i.ibb.co/YNbMTHR/Neucron-1.png" alt="Neucron-1" border="0" style="display: block; margin: 0 auto;"></a>
+            </td>
+        </tr>
+    </table>
 
-  .cardimg {
-    margin-top: 16px;
-  }
-
-  .cardes {
-    margin-left: 16px;
-    font-size: 10px;
-    text-align: left;
-  }
-
-  .cardtitle {
-    font-size: 16px;
-    color: #09192A;
-    font-weight: 600;
-  }
-
-  .cardtitle2 {
-    font-size: 14px;
-    color: #5A7184;
-  }
-
-  .cardtitle {
-    position: relative;
-  }
-
-  .cardtitle::before {
-    content: "";
-    position: absolute;
-    left: -7px;
-    /* right: 1px; */
-    /* top: 0; */
-    height: 30%;
-    width: 2px;
-    background-color: #06E6EC; /* Change the color as needed */
-  }
-  .mainimg{
-    position: relative;
-    /* display: inline-block; */
-  }
-  .hand{
-    display: block;
-    width: 100%;
-    margin: auto;
-  }
-
-  .join {
-    background-color: white;
-    text-align: center;
-    align-items: center;
-    justify-items: center;
-  }
-
-  .joinheading {  
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    max-width: 600px;
-    min-width: 400px;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    text-align: center;
-    color: #FFFFFF;
-    font-size: 32px;
-    font-weight: 600;
-    margin: auto;
-  }
-
-  .joinheading2 {
-    width: 400px;
-    margin: auto;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    position: absolute;
-    font-size: 24px;
-  }
-
-  .clickhere {
-    color: #112D44;
-    font-size: 20px;
-    margin-top: 3rem;
-  }
-
-  .linkclick {
-    color: #112D44;
-    font-size: 20px;
-    margin-top: 0.5rem;
-    cursor: pointer;
-    /* text-decoration: underline; */
-    font-style: italic;
-  }
-
-  .underline {
-    height: 1px;
-    background-color: #112D44;
-    margin-top: 3rem;
-    margin-left: 16px;
-    margin-right: 16px;
-  }
-  .underline1 {
-    height: 1px;
-    /* align-items: center; */
-    margin: auto;
-    /* width: 50%; */
-    max-width: 310px;
-    background-color: #112D44;
-    /* margin-top: 3rem; */
-    /* margin-left: 122px; */
-    /* margin-right: 122px; */
-  }
-  .simplify {
-    margin: 40px;
-    color: #112D44;
-    font-size: 18px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-
-  </style>
-</head>
-
-<body>  
-    <navbar class="navbar">
-        <a href="https://imgbb.com/"><img src="https://i.ibb.co/YNbMTHR/Neucron-1.png" alt="Neucron-1" border="0"></a>
-    </navbar>
-    <div class="header">
-        <h1 class="heading">Introducing</h1>
-        <h2 class="subheading">Neucron API</h2>
-        <p class="intro1">Dear Blockchain Enthusiast</p>
-        <p class="intro">Are you tired of grappling with complexities and soaring costs in Hyperledger development? <span>Neucron API</span> is here to revolutionize your blockchain journey and propel your business to new heights!</p>
-        <a href="#" class="button">Start Building</a>
-    </div>
-    <div class="neucron">
-        <p class="power">Unleash the Power of Neucron API</p>
-        <div class="outline"></div>
-
-        <div class="card">
-            <div class="eachcard">
-                <div class="cardimg">
-                    <a href="https://imgbb.com/"><img src="https://i.ibb.co/N9yRJss/Artboard-8-copy-3.png" alt="Artboard-8-copy-3" border="0"></a>
-                </div>
-                <div class="cardes">
-                    <p class="cardtitle">Hybrid Blockchain Solutions</p>
-                    <p class="cardtitle2">for ultimate security and flexibility</p>
-                </div>
-                
-            </div>
-            <div class="eachcard">
-                <div class="cardimg">
-                    <a href="https://imgbb.com/"><img src="https://i.ibb.co/zh64Sqt/Artboard-8-copy-2-1.png" alt="Artboard-8-copy-2-1" border="0"></a>
-                </div>
-                
-                <div class="cardes">
-                    <p class="cardtitle">Hybrid Blockchain Solutions</p>
-                    <p class="cardtitle2">for ultimate security and flexibility</p>
-                </div>
-                
-            </div>
-
-            <div class="eachcard">
-                <div class="cardimg">
-                    <a href="https://imgbb.com/"><img src="https://i.ibb.co/8NhwQgJ/Artboard-8-copy-5.png" alt="Artboard-8-copy-5" border="0"></a>
-                </div>
-               
-                <div class="cardes">
-                    <p class="cardtitle">Hybrid Blockchain Solutions</p>
-                    <p class="cardtitle2">for ultimate security and flexibility</p>
-                </div>
-               
-            </div>
-            <div class="eachcard">
-                <div class="cardimg">
-                    <a href="https://imgbb.com/"><img src="https://i.ibb.co/1RS6Jpf/Artboard-8-copy-7-1.png" alt="Artboard-8-copy-7-1" border="0"></a>
-                </div>
-               
-                <div class="cardes">
-                    <p class="cardtitle">Hybrid Blockchain Solutions</p>
-                    <p class="cardtitle2">for ultimate security and flexibility</p>
-                </div>
-                
-            </div>
+    <table align="center" bgcolor="#09192A" cellpadding="0" cellspacing="0" width="100%" style="position: relative; background-image: url('https://i.ibb.co/1vhn8qy/blockchain-2-email-3-1.png'); background-size: cover; background-repeat: no-repeat;">
+        <tr>
+            <td align="center" style="padding: 40px; padding-top: 80px;">
+                <h1 style="font-size: 32px; color: #06E6EC; font-weight: 400; margin: 0;">Introducing</h1>
+                <h2 style="font-size: 44px; color: #F2F2F2; font-weight: 600; margin: 0;">Neucron API</h2>
+                <p style="font-weight: 600; font-size: 18px; margin-top: 40px; color: #FFFFFFE5;">Dear Blockchain Enthusiast,</p>
+                <p style="font-size: 16px; max-width: 400px; margin: 0 auto; color: rgba(192, 190, 190, 0.9);">Are you tired of grappling with complexities and soaring costs in Hyperledger development? <strong style="color: #06E6EC; ">Neucron API</strong> is here to revolutionize your blockchain journey and propel your business to new heights!</p>
+                <p style="margin: 80px 0;"><a href="#" style="background-color: #06E6EC; color: #09192A; font-weight: bold; padding: 16px 24px; border-radius: 4px; text-decoration: none;">Start Building</a></p>
+            </td>
+        </tr>
+    </table>
+    
+    <!-- Cards -->
+    <table align="center" cellpadding="0" cellspacing="0" width="100%" style="padding-bottom:30px; align-items: center; text-align: center; justify-content: center;">
+        <tr>
+            <td>
+                <h2 style="font-size: 28px; color: #112D44; font-weight: 600; padding-top: 60px;">Unleash the Power of Neucron API</h2>
+                <div style="height: 2px; width:140px; background-color: #06E6EC; margin: auto;"></div>
+            </td>
+        </tr>
+    </table>
+    <table align="center" cellpadding="0" cellspacing="0" width="100%" style="padding-bottom:50px;">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                     <tr style="display: flex; flex-wrap: wrap; justify-content: center;">
+     
+                             <!-- Card 1 -->
+                            
+                            <td style="flex: 1; max-width: calc(25% - 20px); margin: 10px; background-color: #FFF; border-radius: 0.5rem; text-align: left; padding: 20px; position: relative;">
+                                <div style="margin: 0 auto;">
+                                    <a href="https://imgbb.com/"><img src="https://i.ibb.co/P6Xf5KK/Group-14.png" alt="Group-14" border="0" style="display: block; margin: 0 auto;"></a>
+                                    <!-- <a href="https://imgbb.com/"><img src="https://i.ibb.co/zh64Sqt/Artboard-8-copy-2-1.png" alt="Artboard-8-copy-2-1" border="0"></a> -->
+                                </div>
+                                <div style="position: absolute; transform: translateY(120%); width: 2px; height: 16px; background-color: #06E6EC; left: 14px;"></div>
+                                <p style="font-size: 16px; color: #09192A; font-weight: 600;">Hybrid Blockchain Solutions</p>
+                                <p style="font-size: 14px; color: #414446;">for ultimate security and flexibility</p>
+                            </td>
+                             <!-- Card 2 -->
+                             <td style="flex: 1; max-width: calc(25% - 20px); margin: 10px; background-color: #FFF; border-radius: 0.5rem; text-align: left; padding: 20px; position: relative;">
+                                 <div style="margin: 0 auto;">
+                                    <a href="https://imgbb.com/"><img src="https://i.ibb.co/m6cXScS/Group-16.png" alt="Group-16" border="0" style="display: block; margin: 0 auto;"></a>
+                                 </div>
+                                 <div style="position: absolute; transform: translateY(120%); width: 2px; height: 16px; background-color: #06E6EC; left: 14px;"></div>
+                                 <p style="font-size: 16px; color: #09192A; font-weight: 600;">Unbounded Scalability</p>
+                                 <p style="font-size: 14px; color: #414446;"> to 150k TPS at only 0.1 cents/transaction</p>
+                             </td>
+     
+                             <!-- Card 3 -->
+                             <td style="flex: 1; max-width: calc(25% - 20px); margin: 10px; background-color: #FFF; border-radius: 0.5rem; text-align: left; padding: 20px; position: relative;">
+                                 <div style="margin: 0 auto;">
+                                    <a href="https://imgbb.com/"><img src="https://i.ibb.co/fQVcnPr/Group-18.png" alt="Group-18" border="0" style="display: block; margin: 0 auto;"></a>
+                                 </div>
+                                 <div style="position: absolute; transform: translateY(120%); width: 2px; height: 16px; background-color: #06E6EC; left: 14px;"></div>
+                                 <p style="font-size: 16px; color: #09192A; font-weight: 600;">Save Time  and Money</p>
+                                 <p style="font-size: 14px; color: #414446;">with streamlined APIs</p>
+                             </td>
+     
+                             <!-- Card 4 -->
+                             <td style="flex: 1; max-width: calc(25% - 20px); margin: 10px; background-color: #FFF; border-radius: 0.5rem; text-align: left; padding: 20px; position: relative;">
+                                 <div style="margin: 0 auto;">
+                                    <a href="https://imgbb.com/"><img src="https://i.ibb.co/s1pfB6f/Group-19.png" alt="Group-19" border="0" style="display: block; margin: 0 auto;"></a>
+                                 </div>
+                                 <div style="position: absolute; transform: translateY(120%); width: 2px; height: 16px; background-color: #06E6EC; left: 14px;"></div>
+                                 <p style="font-size: 16px; color: #09192A; font-weight: 600;">Embrace a Tokenless Advantage
+                                     </p>
+                                 <p style="font-size: 14px; color: #414446;">for smoother transactions</p>
+                             </td>
+     
+                         </tr>
+                     </table>
+                 </td>
+             </tr>
+         </table>
+    <table align="center" bgcolor="white" cellpadding="0" cellspacing="0" width="100%">
+      <div style="position: relative; width: 100%;">
+        <img src="https://i.ibb.co/vcJpP1q/hand-3-1.png" alt="hand-3-1" border="0" class="hand" style="width: 100%; height: auto;">
+        <div style="position: absolute; top: 20%; left: 50%; transform: translateX(-50%); text-align: center; width: 100%;">
+            <p class="joinheading" style="font-size: 28px; font-weight: bold; color: #FFF; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); margin: 0;">Join us for a live demo</p>
+            <p class="joinheading2" style="font-size: 28px; color: #FFF; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); margin: 0;">and be part of the future!</p>
         </div>
-    </div>
-    <div class="mainimg">
-      <a href="https://imgbb.com/"><img src="https://i.ibb.co/vcJpP1q/hand-3-1.png" alt="hand-3-1" border="0" class="hand"></a>
-      <p class="joinheading">Join us for a live demo</p>
-      <p class="joinheading2">and be part of the future! </p>
-    </div>   
-    <div class="join">
-        <div class="clickhere">Click here to schedule your slot:</div>
-        <div class="linkclick">https://calendly.com/timechainlabs</div>
-        <div class="underline1"></div>
-        <div class="underline"></div>
-        <div class="simplify">Simplify, Innovate, and Excel with Neucron API - Your gateway to seamless blockchain development</div>
-    </div>
+      </div>     
+    </table>
 
+    <!-- Join Section -->
+    <table align="center" bgcolor="white" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td align="center" style="padding: 40px; clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);">
+            
+                <!-- <p style="color: #0C375A; margin: 0; font-size: 28px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Join us for a live demo</p> -->
+                <!-- <p style="margin: 0; font-size: 28px; color: #0C375A; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">and be part of the future!</p> -->
 
-    <div class="footer">
-        <a href="https://imgbb.com/"><img src="https://i.ibb.co/gmQVgpq/Neucron.png" alt="Neucron" border="0" class="img3"></a>
-        <div class="img4">
-            <p class="img5">
-                TimeChain Labs Private Limited, Salarpuria Sattva Knowledge City,
-                Level 7, Octave Block, Inorbit Mall Road, Hitech City
-                Hyderabad, India - 500081
-            </p>
-        </div>
-        <div class="contact">
-            <div class="eachcontact">
-                <a href="https://imgbb.com/"><img src="https://i.ibb.co/WHJgWQf/Group-3.png" alt="Group-3" border="0" class="itemcontact"></a>
-                <a href="https://imgbb.com/"><img src="https://i.ibb.co/kQMZ8Xx/Group-4.png" alt="Group-4" border="0" class="itemcontact"></a>
-                <a href="https://imgbb.com/"><img src="https://i.ibb.co/YZX7WX2/Group-5.png" alt="Group-5" border="0" class="itemcontact"></a>
-                <a href="https://imgbb.com/"><img src="https://i.ibb.co/B2y1923/Group-6.png" alt="Group-6" border="0" class="itemcontact"></a>
-                <a href="https://imgbb.com/"><img src="https://i.ibb.co/G9gy2YN/Group-7.png" alt="Group-7" border="0" class="itemcontact"></a>
-                <a href="https://imgbb.com/"><img src="https://i.ibb.co/fpV4hNj/Group-10.png" alt="Group-10" border="0" class="itemcontact"></a>
-            </div>
-        </div>
-        <div class="rights">
-            <a>© 2023 Timechain Labs, All Rights Reserved</a>
-        </div>
-        <div class="unsubscribe">
-            <a><strong>Unsubscribe</strong> or <strong>Manage Your Preferences</strong></a>
-        </div>
-    </div>
+                <p style="color: #112D44; font-size: 16px;">Click here to schedule your slot:</p>
+                <a style="color: #112D44; font-size: 16px; margin-top: 0.5rem; text-decoration: none; font-style: italic; font-weight: 600;" href="https://calendly.com/timechainlabs">https://calendly.com/timechainlabs</a>
+                <p style="height: 1px; background-color: #00000080; margin-top: 2px; width: 250px;"></p>
+                <p style="height: 1px; background-color: #112D4480; margin-top: 1.5rem;"></p>
+                <p style="text-align: center; font-size: 16px; margin: 1.5rem 1rem;">Simplify, Innovate, and Excel with Neucron API - Your gateway to seamless blockchain development</p>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Footer -->
+    <table align="center" cellpadding="0" cellspacing="0" width="100%" bgcolor="##041123">
+        <tr>
+            <td align="center" style="padding: 40px;">
+                <a href="https://imgbb.com/"><img src="https://i.ibb.co/gmQVgpq/Neucron.png" alt="Neucron" border="0"></a>
+                <p style="font-size: 16px; color: #5A7184; max-width: 400px; margin: 1rem auto; line-height: 1.5;">TimeChain Labs Private Limited, Salarpuria Sattva Knowledge City, Level 7, Octave Block, Inorbit Mall Road, Hitech City<br>Hyderabad, India - 500081</p>
+                <div style="text-align: center;">
+                      <a href="https://imgbb.com/"><img src="https://i.ibb.co/WHJgWQf/Group-3.png" alt="Group-3" border="0"></a>
+                        <a href="https://imgbb.com/"><img src="https://i.ibb.co/kQMZ8Xx/Group-4.png" alt="Group-4" border="0"></a>
+                        <a href="https://imgbb.com/"><img src="https://i.ibb.co/YZX7WX2/Group-5.png" alt="Group-5" border="0"></a>
+                        <a href="https://imgbb.com/"><img src="https://i.ibb.co/B2y1923/Group-6.png" alt="Group-6" border="0"></a>
+                        <a href="https://imgbb.com/"><img src="https://i.ibb.co/G9gy2YN/Group-7.png" alt="Group-7" border="0"></a>
+                        <a href
+                </div>
+                <p style="font-size: 12px; color: #5A7184; margin: 2rem 0;">© 2023 Timechain Labs, All Rights Reserved</p>
+                <p style="font-size: 12px; color: #5A7184;"><strong>Unsubscribe</strong> or <strong>Manage Your Preferences</strong></p>
+            </td>
+        </tr>
+    </table>
 
 </body>
-
 </html>
+
+
+
